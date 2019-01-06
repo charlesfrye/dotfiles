@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/charlesfrye/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -55,7 +55,7 @@ plugins=(git colored-man-pages zsh-syntax-highlighting)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 #REMOVE user@hostname FROM WINDOW
 DEFAULT_USER="charlesfrye"
@@ -63,7 +63,7 @@ DEFAULT_USER="charlesfrye"
 setopt extended_glob
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+export LANG="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -112,4 +112,4 @@ export XDG_BIN_HOME="$HOME/.local/bin"
 
 export VISUAL="$EDITOR"
 alias vim='nvim'
-alias config='/usr/bin/git --git-dir=/Users/charlesfrye/.cfg/ --work-tree=/Users/charlesfrye'
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
