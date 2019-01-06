@@ -115,9 +115,8 @@ export EDITOR=/usr/bin/vim
 #	tmux attach
 #fi
 
-# make CUDA visible, set CUDA_VISIBLE_DEVICES
-# export LD_LIBRARY_PATH='/usr/local/cuda/lib64:$LD_LIBRARY_PATH'
-# export CUDA_VISIBLE_DEVICES=1
+# make CUDA visible
+export LD_LIBRARY_PATH=:/usr/local/cuda/extras/CUPTI/lib64
 
 # if we're not a tmux session, do PATH setup:
 
