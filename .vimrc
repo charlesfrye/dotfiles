@@ -8,13 +8,10 @@ call vundle#begin()
 
 "let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'vim-scripts/indentpython.vim'
 Plugin 'bitc/vim-bad-whitespace'
 Plugin 'vim-syntastic/syntastic' "python syntax checker
-Plugin 'nvie/vim-flake8'      "python flakes (not working?)
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'lukerandall/haskellmode-vim'
 Plugin 'scrooloose/nerdtree' "file browser
 Plugin 'dag/vim2hs' "haskell support
 Plugin 'easymotion/vim-easymotion' "lexical motions in vim
@@ -141,6 +138,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_exec = 'python3'
+let g:syntastic_python_flake8_args = ['-m', 'flake8']
 
 " Remove highlighting from search with <CR>
 nnoremap <CR> :noh<CR>

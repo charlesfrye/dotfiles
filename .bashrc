@@ -56,20 +56,12 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}]$PS1"
-    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\e[1;36m\u\e[m:\e[1;32m\W\e[m$ "
     ;;
 *)
     ;;
@@ -124,14 +116,11 @@ export EDITOR=/usr/bin/vim
 #fi
 
 # make CUDA visible, set CUDA_VISIBLE_DEVICES
-export LD_LIBRARY_PATH='/usr/local/cuda/lib64:$LD_LIBRARY_PATH'
-export CUDA_VISIBLE_DEVICES=1
+# export LD_LIBRARY_PATH='/usr/local/cuda/lib64:$LD_LIBRARY_PATH'
+# export CUDA_VISIBLE_DEVICES=1
 
 # if we're not a tmux session, do PATH setup:
 
 if [[ -z $TMUX ]]; then
-  export PATH="~/scripts/:$PATH"
-  export PATH="/home/charlesfrye/OptimizationLandscapes/scripts:$PATH"
+  export PATH="$HOME/scripts/:$PATH"
 fi
-
-export PYTHONPATH="/home/charlesfrye/OptimizationLandscapes/"
