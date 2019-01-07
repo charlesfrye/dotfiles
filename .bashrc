@@ -68,7 +68,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}]$PS1"
+    #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}]$PS1"
     #PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
@@ -130,8 +130,8 @@ export CUDA_VISIBLE_DEVICES=1
 # if we're not a tmux session, do PATH setup:
 
 if [[ -z $TMUX ]]; then
-  export PATH="~/scripts/:$PATH"
-  export PATH="/home/charlesfrye/OptimizationLandscapes/scripts:$PATH"
+  export PATH="$HOME/scripts/:$PATH"
+  export PATH="$HOME/OptimizationLandscapes/scripts:$PATH"
 fi
 
 export PYTHONPATH="/home/charlesfrye/OptimizationLandscapes/"
