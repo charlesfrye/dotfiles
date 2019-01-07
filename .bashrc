@@ -120,4 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export EDITOR=vim
+
+# simple dotfile config management via git alias
 alias config='/usr/bin/git --git-dir=/home/charlesfrye/.cfg/ --work-tree=/home/charlesfrye'

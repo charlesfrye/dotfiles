@@ -73,6 +73,9 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# use vim as editor
+export EDITOR=vim
+
 # ssh into redwood1 with port-forwarding
 alias portforward="ssh -L 8890:localhost:8888"
 export RW1="charlesfrye@redwood1.dyn.berkeley.edu"
