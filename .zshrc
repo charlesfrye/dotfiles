@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/charlesfrye/.oh-my-zsh
@@ -71,9 +73,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# venvs
-alias main="source ~/environments/main/bin/activate"
-
 # ssh into redwood1 with port-forwarding
 alias portforward="ssh -L 8890:localhost:8888"
 export RW1="charlesfrye@redwood1.dyn.berkeley.edu"
@@ -84,4 +83,4 @@ export DEFAULT_USER=`whoami`
 # make windows files easily accessible
 export C_="/mnt/c/Users/charlesfrye"
 
-#[[ "$TERM" == "xterm" ]] && export TERM=xterm-256color
+alias config='/usr/bin/git --git-dir=/home/charlesfrye/.cfg/ --work-tree=/home/charlesfrye'
