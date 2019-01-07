@@ -83,4 +83,10 @@ export DEFAULT_USER=`whoami`
 # make windows files easily accessible
 export C_="/mnt/c/Users/charlesfrye"
 
+# simple dotfile config management via git alias
 alias config='/usr/bin/git --git-dir=/home/charlesfrye/.cfg/ --work-tree=/home/charlesfrye'
+
+# if we are not in a tmux, do path management
+if [[ -z $TMUX ]]; then
+  export PATH=$HOME/scripts/:$PATH
+fi
