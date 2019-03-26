@@ -65,25 +65,9 @@ endif
 "Line numbers on
 set nu
 
-"Set softtabstop
-"set softtabstop=4
-"python settings
-"au BufNewFile,BufRead *.py
-"    \ set textwidth=79 tabstop=8 softtabstop=0 noexpandtab shiftwidth=4 smarttab
-"    "\ set softtabstop=0
-"    "\ set shiftwidth=4
-"    \ set noexpandtab
-"    "\ set autoindent
-"    \ set fileformat=unix
-"    \ let python_highlight_all=1
-"    \ syntax on
-
 "haskell settings
 au BufNewFile,BufRead *.hs
     \ set tabstop=4 shiftwidth=4 expandtab
-"au BufEnter *.hs compiler ghc
-
-"au BufRead,bufNewFile *.py,*.pyw,*.c,*.hs match BadWhitespace /\s\+$/
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -138,8 +122,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = 'python3'
-let g:syntastic_python_flake8_args = ['-m', 'flake8']
+" let g:syntastic_python_flake8_exec = 'python3'
+" let g:syntastic_python_flake8_args = ['-m', 'flake8']
 
 " Remove highlighting from search with <CR>
 nnoremap <CR> :noh<CR>
