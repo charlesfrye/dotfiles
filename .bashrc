@@ -56,16 +56,23 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+if [ "$color_prompt" = yes ]; then
+	PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
+else
+	PS1="\${debian_chroot:+(\$debian_chroot)}\u:\W\$ "
+fi
+
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\e[1;36m\u\e[m:\e[1;32m\W\e[m$ "
-    ;;
-*)
-    ;;
-esac
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PS1="\e[1;36m\u\e[m:\e[1;32m\W\e[m$ "
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -118,8 +125,15 @@ export EDITOR=/usr/bin/vim
 # make CUDA visible
 export LD_LIBRARY_PATH=:/usr/local/cuda/extras/CUPTI/lib64
 
+# shortcut to ssh into RW1
+export RW1='charlesfrye@redwood1.dyn.berkeley.edu'
+
+# shortcut to ssh into Home Windows
+export WIN='charlesfrye@192.168.2.130'
+
 # if we're not a tmux session, do PATH setup:
 
 if [[ -z $TMUX ]]; then
   export PATH="$HOME/scripts/:$PATH"
 fi
+
