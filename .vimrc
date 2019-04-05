@@ -74,14 +74,14 @@ endif
 set backupdir=~/.vimtmp,.
 set directory=~/.vimtmp,.
 
-"colorscheme
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	set background=dark
-	colorscheme solarized
-endif
+""colorscheme
+"if has('gui_running')
+"	set background=dark
+"	colorscheme zenburn
+"else
+"	set background=dark
+"	colorscheme zenburn
+"endif
 
 "" POWERLINE:
 "
