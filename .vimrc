@@ -111,6 +111,9 @@ let g:Tex_DefaultTargetFormat='pdf'
 " OPTIONAL: turn off <++>?
 let g:Imap_UsePlaceHolders = 0
 
+" REMOVE HIGHLIGHTING:
+nnoremap <CR> :nohlsearch<CR>
+
 " SYNTASTIC:
 
 let g:syntastic_always_populate_loc_list = 1
