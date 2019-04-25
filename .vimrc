@@ -81,12 +81,12 @@ set backupdir=~/.vimtmp,.
 set directory=~/.vimtmp,.
 
 "colorscheme
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	colorscheme zenburn
-endif
+"if has('gui_running')
+"	set background=dark
+"	colorscheme solarized
+"else
+"	colorscheme solarized
+"endif
 
 " VIMTEX:
 
