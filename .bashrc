@@ -84,6 +84,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+else
+    export CLICOLOR=1
 fi
 
 # some more ls aliases
@@ -128,12 +130,8 @@ export LD_LIBRARY_PATH=:/usr/local/cuda/extras/CUPTI/lib64
 # shortcut to ssh into RW1
 export RW1='charlesfrye@redwood1.dyn.berkeley.edu'
 
-# shortcut to ssh into Home Windows
-export WIN='charlesfrye@192.168.2.130'
-
 # if we're not a tmux session, do PATH setup:
 
 if [[ -z $TMUX ]]; then
   export PATH="$HOME/scripts/:$PATH"
 fi
-
