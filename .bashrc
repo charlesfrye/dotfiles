@@ -117,6 +117,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# history-based completion
+bind '"\e[A" history-search-backward'
+bind '"\e[B" history-search-forward'
+
+# set EDITOR to vim
 export EDITOR=/usr/bin/vim
 
 # reattach to the main tmux session
