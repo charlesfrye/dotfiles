@@ -10,8 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bitc/vim-bad-whitespace'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'scrooloose/nerdtree' "file browser
 Plugin 'easymotion/vim-easymotion' "lexical motions in vim
 Plugin 'vim-latex/vim-latex' "latex integration
@@ -77,10 +76,10 @@ set directory=~/.vimtmp,.
 "colorscheme
 if has('gui_running')
 	set background=dark
-	colorscheme solarized
+	colorscheme anderson
 else
  	set background=dark
- 	colorscheme solarized
+ 	colorscheme anderson
 endif
 
 "" POWERLINE:
