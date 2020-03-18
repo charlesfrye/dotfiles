@@ -124,3 +124,5 @@ export EDITOR=vim
 
 # simple dotfile config management via git alias
 alias config='/usr/bin/git --git-dir=/home/charlesfrye/.cfg/ --work-tree=/home/charlesfrye'
+
+# PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
