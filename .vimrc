@@ -14,7 +14,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree' "file browser
 Plugin 'easymotion/vim-easymotion' "lexical motions in vim
-Plugin 'jcf/vim-latex' "latex integration
+Plugin 'vim-latex/vim-latex' "latex integration
 Plugin 'ervandew/supertab' "tab completion
 "Plugin 'ehamberg/vim-cute-python' "mathy conceal
 Plugin 'severin-lemaignan/vim-minimap' "sublime-style minimap
@@ -74,14 +74,14 @@ endif
 set backupdir=~/.vimtmp,.
 set directory=~/.vimtmp,.
 
-# "colorscheme
-# if has('gui_running')
-# 	set background=dark
-# 	colorscheme solarized
-# else
-# 	set background=dark
-# 	colorscheme solarized
-# endif
+"colorscheme
+if has('gui_running')
+	set background=dark
+	colorscheme solarized
+else
+ 	set background=dark
+ 	colorscheme solarized
+endif
 
 "" POWERLINE:
 "
@@ -111,6 +111,9 @@ let g:Tex_DefaultTargetFormat='pdf'
 " OPTIONAL: turn off <++>?
 let g:Imap_UsePlaceHolders = 0
 
+" REMOVE HIGHLIGHTING:
+nnoremap <CR> :nohlsearch<CR>
+
 " SYNTASTIC:
 
 let g:syntastic_always_populate_loc_list = 1
@@ -137,3 +140,6 @@ nnoremap <silent> <C-c><C-y> :call ToggleConcealLevel()<CR>
 "line numbers
 set number
 set relativenumber
+
+" DEACTIVATE BELL:
+set visualbell

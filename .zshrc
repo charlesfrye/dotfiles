@@ -89,7 +89,12 @@ export C_="/mnt/c/Users/charlesfrye"
 # simple dotfile config management via git alias
 alias config='/usr/bin/git --git-dir=/home/charlesfrye/.cfg/ --work-tree=/home/charlesfrye'
 
+export CHAPTER1="/home/charlesfrye/research/thesis/chapters/chapter1/chapter1.pdf"
+export CHAPTER2="/home/charlesfrye/research/thesis/chapters/chapter2/chapter2.pdf"
+export CHAPTER3="/home/charlesfrye/research/thesis/chapters/chapter3/chapter3.pdf"
+
 # if we are not in a tmux, do path management
 if [[ -z $TMUX ]]; then
   export PATH=$HOME/scripts/:$PATH
+  export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 fi
