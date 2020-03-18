@@ -14,7 +14,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree' "file browser
 Plugin 'easymotion/vim-easymotion' "lexical motions in vim
-Plugin 'jcf/vim-latex' "latex integration
+Plugin 'vim-latex/vim-latex' "latex integration
 Plugin 'ervandew/supertab' "tab completion
 "Plugin 'ehamberg/vim-cute-python' "mathy conceal
 Plugin 'severin-lemaignan/vim-minimap' "sublime-style minimap
@@ -140,3 +140,6 @@ nnoremap <silent> <C-c><C-y> :call ToggleConcealLevel()<CR>
 "line numbers
 set number
 set relativenumber
+
+" DEACTIVATE BELL:
+set visualbell
