@@ -98,3 +98,5 @@ if [[ -z $TMUX ]]; then
   export PATH=$HOME/scripts/:$PATH
   export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 fi
+
+unsetopt BEEP
