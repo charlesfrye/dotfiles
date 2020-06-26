@@ -93,10 +93,22 @@ export CHAPTER1="/home/charlesfrye/research/thesis/chapters/chapter1/chapter1.pd
 export CHAPTER2="/home/charlesfrye/research/thesis/chapters/chapter2/chapter2.pdf"
 export CHAPTER3="/home/charlesfrye/research/thesis/chapters/chapter3/chapter3.pdf"
 
+# export pyenv location
+export PYENV_ROOT="$HOME/.pyenv"
+
 # if we are not in a tmux, do path management
 if [[ -z $TMUX ]]; then
   export PATH=$HOME/scripts/:$PATH
   export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+  export PATH="$PYENV_ROOT/bin:$PATH"
 fi
 
 unsetopt BEEP
+
+# pyenv setup
+if command -v pyenv 1> /dev/null 2>&1; then
+	eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
+
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
