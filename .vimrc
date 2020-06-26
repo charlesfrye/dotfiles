@@ -142,3 +142,6 @@ set relativenumber
 
 " DEACTIVATE BELL:
 set visualbell
+
+" SWAP FILES:
+set directory=~/.vimtmp
